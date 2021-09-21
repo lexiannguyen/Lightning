@@ -9,24 +9,27 @@ void setup()
   background(255, 255, 255);
 }
 void draw(){
-  while(starty<=310){
-    fill(0);
-    int randomx = (int)(Math.random()*19 - 9);
-    endx = randomx;
-    endy = (int)(Math.random()*10);
+  stroke(0);
+  line(50, 50, 90, 90);
+  while(starty < 310){
+    
+    endx = ((int)(Math.random()*19 - 9));
+    endy = ((int)(Math.random()*10));
+    stroke(0);
     line(startx, starty, endx, endy);
     startx = endx;
     starty = endy;
   }
 //set stroke color to random value
 //while loop repeating until end y is off screen
-//  set endx & startx to random int from -9 to 9
-//  set endy & starty to random int from 0 to 9
-//  draw a line, starting from startx,starty ending at endx, endy
-//  set startx = endx and starty = endy
+
 }
 void mousePressed()
 {
   startx = 150;
   starty = 0;
-//set x an
+  endx = 150;
+  endy = 0;
+  
+//set x and y to original values
+}
