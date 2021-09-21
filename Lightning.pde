@@ -10,11 +10,12 @@ void setup()
 }
 void draw(){
   stroke(0);
-  line(50, 50, 90, 90);
+
   while(starty < 310){
-    
-    endx = ((int)(Math.random()*19 - 9));
-    endy = ((int)(Math.random()*10));
+    int changex = ((int)(Math.random()*19 - 9));
+    int changey = ((int)(Math.random()*10));
+    endx = startx+changex;
+    endy = starty+changey;
     stroke(0);
     line(startx, starty, endx, endy);
     startx = endx;
@@ -30,6 +31,7 @@ void mousePressed()
   starty = 0;
   endx = 150;
   endy = 0;
+  draw();
   
 //set x and y to original values
 }
