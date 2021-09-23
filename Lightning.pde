@@ -5,19 +5,30 @@ int endy = 0;
 void setup()
 {
   size(300,300);
-  strokeWeight(3);
-  background(255, 255, 255);
+
+  background(0, 0, 0);
 }
 void draw(){
+  noStroke();
+  ellipse(150, 11, 40, 40);
+  ellipse(130, 17, 30, 30);
+  ellipse(170, 17, 30, 30);
   stroke(0);
-
+  int r = (int)(Math.random()*260+80);
   while(starty < 310){
     int changex = ((int)(Math.random()*19 - 9));
     int changey = ((int)(Math.random()*10));
     endx = startx+changex;
     endy = starty+changey;
-    stroke(0);
+    tint(255, 128);
+    
+    stroke(r, 10, 100);
+    strokeWeight(6);
     line(startx, starty, endx, endy);
+    
+    stroke(255);
+    strokeWeight(2);
+    line(startx, starty-2, endx, endy);
     startx = endx;
     starty = endy;
   }
@@ -31,7 +42,7 @@ void mousePressed()
   starty = 0;
   endx = 150;
   endy = 0;
-  draw();
+  redraw();
   
 //set x and y to original values
 }
