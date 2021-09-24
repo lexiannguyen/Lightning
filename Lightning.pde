@@ -42,6 +42,13 @@ void mousePressed()
   starty = 0;
   endx = 150;
   endy = 0;
+    fill(0);
+  rect(0, 30, 300, 270);
+  noStroke();
+  fill(255);
+  ellipse(150, 11, 40, 40);
+  ellipse(130, 17, 30, 30);
+  ellipse(170, 17, 30, 30);
   redraw();
   
 //set x and y to original values
